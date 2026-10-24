@@ -1,6 +1,6 @@
-# DevDay Exchange Community Hackathon: Kochi
+# DevinHacks Kochi
 
-A repository template for participants at the 10–11 October 2026 hackathon. It contains event rules and documentation scaffolding; build your project from scratch at the event.
+A repository template for participants at the 24–25 October 2026 hackathon. It contains event rules and documentation scaffolding; build your project from scratch at the event.
 
 **[Event and registration on Luma](https://luma.com/z10nz8gp)** · **[Event rules](RULES.md)** · **[Agent instructions](AGENTS.md)**
 
@@ -11,10 +11,10 @@ A repository template for participants at the 10–11 October 2026 hackathon. It
 | Venue | JAIN University, Kochi |
 | Location | [Open the venue map](https://maps.app.goo.gl/Eme7gR7NDXSNRANu5) |
 | Rooms | 2008 and 2009 |
-| Check-in | 10 October 2026, 6:00 PM IST |
-| Kick-off | 10 October 2026, 6:30 PM IST |
-| Wrap-up | 11 October 2026, by 10:00 AM IST |
-| Participation | Solo or a team of up to 4 participants |
+| Check-in | 24 October 2026, 5:00 PM IST |
+| Kick-off | 24 October 2026, 6:30 PM IST |
+| Wrap-up | 25 October 2026, by 10:00 AM IST |
+| Participation | Solo |
 | Theme | Open — build anything you like |
 
 Keep your approved Luma QR code ready for entry, and bring your laptop and charger. Eligible checked-in participants will receive Codex credits and OpenAI API credits.
