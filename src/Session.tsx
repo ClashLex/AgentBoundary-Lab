@@ -134,9 +134,6 @@ function Board({
 }: Pick<SessionProps, 'view' | 'onAction' | 'playhead'>) {
   const [selected, setSelected] = useState<number | null>(null);
   const canEdit = view.role === 'conductor' && view.phase === 'playing' && !view.pendingSubmission;
-  useEffect(() => {
-    if (!canEdit) setSelected(null);
-  }, [canEdit]);
   return (
     <section className="panel board-panel">
       <div className="panel-title-row">
@@ -148,7 +145,7 @@ function Board({
       </div>
       <div className="score-grid" aria-label="Eight-slot shared composition">
         {view.board.map((slot, index) => {
-          const active = selected === index;
+          const active = canEdit && selected === index;
           return (
             <button
               key={index}

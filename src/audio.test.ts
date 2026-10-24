@@ -11,7 +11,7 @@ class FakeOscillator {
   frequency = { setValueAtTime: (value: number) => { this.frequencyValue = value; } };
   connect(gain: FakeGain) { return gain; }
   start(time?: number) { this.startTime = time; }
-  stop(_time?: number) { /* The fake records only scheduling. */ }
+  stop() { /* The fake records only scheduling. */ }
 }
 
 class FakeGain {
@@ -19,9 +19,9 @@ class FakeGain {
   gain = {
     value: 1,
     peak: 0,
-    setValueAtTime: (_value: number) => {},
+    setValueAtTime: () => {},
     linearRampToValueAtTime: (value: number) => { this.gain.peak = value; },
-    exponentialRampToValueAtTime: (_value: number) => {}
+    exponentialRampToValueAtTime: () => {}
   };
   constructor(destination: object) { this.destination = destination; }
   connect(destination: object) {

@@ -86,6 +86,16 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 02:07:40 | Modified | `src/main.tsx` | Enabled the supplied dither component's click ripple so pointer clicks and taps briefly disturb the background while hover remains quiet. |
 | 2026-10-25 02:24:55 | Created | `render.yaml` | Defined one paid Starter Docker web service, one instance, `/health` checks, and manual deploys so code pushes do not interrupt active rooms. |
 | 2026-10-25 02:24:55 | Modified | `README.md` | Added Render Blueprint setup, three-device access, manual release steps, and the in-memory room restart limitation. |
+| 2026-10-25 03:00:39 | Modified | `.gitignore` | Excluded the workspace-local npm cache used to install lint dependencies. |
+| 2026-10-25 03:00:39 | Created | `eslint.config.js` | Added recommended ESLint, TypeScript, and React Hooks rules for browser and Node source files. |
+| 2026-10-25 03:00:39 | Modified | `package.json` | Added the lint command and lint dependencies; moved TypeScript to the supported 6.0 line for typescript-eslint. |
+| 2026-10-25 03:00:39 | Modified | `package-lock.json` | Locked the lint tooling and TypeScript 6.0.3 for reproducible installs. |
+| 2026-10-25 03:00:39 | Modified | `README.md` | Documented the lint command alongside tests and the production build. |
+| 2026-10-25 03:00:39 | Modified | `server/rooms.ts` | Removed an unused Rest import reported by ESLint. |
+| 2026-10-25 03:00:39 | Modified | `src/Demo.tsx` | Removed an unused Rest import reported by ESLint. |
+| 2026-10-25 03:00:39 | Modified | `src/Dither.tsx` | Updated the settings ref after render, keeping the WebGL renderer current without writing to a ref during render. |
+| 2026-10-25 03:00:39 | Modified | `src/Session.tsx` | Removed a synchronous state update from an effect and hid slot selection while board editing is locked. |
+| 2026-10-25 03:00:39 | Modified | `src/audio.test.ts` | Removed unused parameters from fake audio methods without changing their test behavior. |
 
 ## Build order
 
@@ -112,5 +122,6 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 02:03 | Dither background | All 9 tests and the production build passed. Desktop and 375 px mobile production captures showed the pale pattern behind readable content; mobile had no horizontal overflow. |
 | 2026-10-25 02:09 | Dither click ripple | All 9 tests and the production build passed. At a static 375 px browser viewport, a click changed the dither image and it returned exactly to its original image after the ripple faded. |
 | 2026-10-25 02:25 | Render deployment readiness | All 9 tests and the production build passed. The production server returned HTTP 200 for `/health` and the homepage. `git diff --check` passed; no Render deployment was started from this workspace. |
+| 2026-10-25 03:00 | Lint regression | ESLint reported 7 issues; all were fixed. `npm run lint` passed with zero warnings, all 9 tests passed, and the TypeScript/Vite production build passed. |
 
 No project source files were deleted. The unused `tsx` dependency was removed from the package manifests. Browser screenshots were written only to the system temporary directory.

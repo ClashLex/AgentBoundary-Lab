@@ -1,6 +1,5 @@
 import { randomBytes, randomUUID } from 'node:crypto';
 import {
-  REST,
   createTarget,
   emptyBoard,
   isComplete,

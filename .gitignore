@@ -8,6 +8,7 @@
 
 # Common dependencies, build output, caches, and local tooling.
 node_modules/
+.npm-cache/
 .next/
 dist/
 build/

@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react';
 import Session from './Session.tsx';
 import {
-  REST,
   createTarget,
   emptyBoard,
   isComplete,

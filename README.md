@@ -30,10 +30,11 @@ Keep the command window and host computer running for the round. The share comma
 
 ```powershell
 npm.cmd test
+npm.cmd run lint
 npm.cmd run build
 ```
 
-The tests cover deterministic puzzle generation, clue recovery, exact scoring, room permissions and recovery, plus a complete three-client Socket.IO round. The build type-checks the client and server and writes browser assets to `dist/`.
+The tests cover deterministic puzzle generation, clue recovery, exact scoring, room permissions and recovery, plus a complete three-client Socket.IO round. Lint checks the TypeScript, React, and Node code. The build type-checks the client and server and writes browser assets to `dist/`.
 
 ## Production
 
