@@ -12,6 +12,6 @@ No participant AI usage has been recorded yet. Replace the placeholder row as yo
 
 ## Template preparation
 
-On 10 October 2026, Codex prepared this documentation template from the organizer's supplied rules and checked the linked Luma page for the event name and dates. This covered `README.md`, `RULES.md`, `AGENTS.md`, `CHANGELOG.md`, `AI_USAGE.md`, `SUBMISSION.md`, `.gitignore`, and the pull request checklist. Agent validation covered local links, event consistency, required documents, and diff whitespace; organizer review is pending.
+
 
 This preparation is separate from participant project implementation and participant AI usage during the event.
