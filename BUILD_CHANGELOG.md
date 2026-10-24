@@ -84,6 +84,8 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 02:00:48 | Modified | `src/Dither.tsx` | Removed the pasted Next.js-only directive that produced a Vite build warning. |
 | 2026-10-25 02:01:20 | Modified | `src/Dither.css` | Reduced dither opacity to 9% on desktop and 6% on narrow screens after visual review. |
 | 2026-10-25 02:07:40 | Modified | `src/main.tsx` | Enabled the supplied dither component's click ripple so pointer clicks and taps briefly disturb the background while hover remains quiet. |
+| 2026-10-25 02:24:55 | Created | `render.yaml` | Defined one paid Starter Docker web service, one instance, `/health` checks, and manual deploys so code pushes do not interrupt active rooms. |
+| 2026-10-25 02:24:55 | Modified | `README.md` | Added Render Blueprint setup, three-device access, manual release steps, and the in-memory room restart limitation. |
 
 ## Build order
 
@@ -109,5 +111,6 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 01:49 | Mobile audio controls | A production browser check at a true 375 px viewport found no horizontal overflow; Mute sound and Test tone were both visible. All 9 tests and the production build passed after the mobile header changes. |
 | 2026-10-25 02:03 | Dither background | All 9 tests and the production build passed. Desktop and 375 px mobile production captures showed the pale pattern behind readable content; mobile had no horizontal overflow. |
 | 2026-10-25 02:09 | Dither click ripple | All 9 tests and the production build passed. At a static 375 px browser viewport, a click changed the dither image and it returned exactly to its original image after the ripple faded. |
+| 2026-10-25 02:25 | Render deployment readiness | All 9 tests and the production build passed. The production server returned HTTP 200 for `/health` and the homepage. `git diff --check` passed; no Render deployment was started from this workspace. |
 
 No project source files were deleted. The unused `tsx` dependency was removed from the package manifests. Browser screenshots were written only to the system temporary directory.

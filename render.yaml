@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: unreliable-orchestra
+    runtime: docker
+    plan: 0.5c-512mb
+    numInstances: 1
+    healthCheckPath: /health
+    autoDeployTrigger: off

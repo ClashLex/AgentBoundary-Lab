@@ -41,6 +41,16 @@ Set `NODE_ENV=production`, install packages, run `npm run build`, and start with
 
 Rooms, chat, and results live in memory. Run one server instance for the MVP; a restart clears active rooms. The server holds live targets and sends each browser only its assigned clue until results.
 
+### Deploy on Render
+
+1. Commit and push this project to the Git repository you want Render to deploy. Check `git remote -v` before pushing so you choose the correct repository.
+2. In the [Render dashboard](https://dashboard.render.com/), select **New > Blueprint**, connect that repository, choose the branch containing this app, and use the root `render.yaml` file.
+3. Review the Blueprint before deploying. It creates one paid Starter Docker web service (0.5 CPU, 512 MB), with one instance and an HTTP health check at `/health`. Render builds the existing `Dockerfile`; no separate frontend or database service is needed for this MVP.
+4. After the deploy finishes, open the service's HTTPS `onrender.com` URL on all three devices. The host creates a room, then shares its six-character code with the other players. Check `https://YOUR-SERVICE.onrender.com/health` if the site does not load.
+5. Automatic deploys are off because a redeploy clears active rooms. When you want to release a new version, use **Manual Deploy > Deploy latest commit** in the service's Deploys page between rounds.
+
+The Blueprint uses the paid Starter instance to avoid the free tier's idle spin-down. Render can still restart or replace an instance; when that happens, this memory-only MVP loses active rooms and players must create a new one. Do not scale above one instance until room state and broadcasts are moved to shared storage.
+
 ## Rules at a glance
 
 - Each target has eight slots using C, D, E, G, A, or an explicit Rest at 100 BPM.
