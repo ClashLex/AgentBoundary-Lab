@@ -96,6 +96,8 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 03:00:39 | Modified | `src/Dither.tsx` | Updated the settings ref after render, keeping the WebGL renderer current without writing to a ref during render. |
 | 2026-10-25 03:00:39 | Modified | `src/Session.tsx` | Removed a synchronous state update from an effect and hid slot selection while board editing is locked. |
 | 2026-10-25 03:00:39 | Modified | `src/audio.test.ts` | Removed unused parameters from fake audio methods without changing their test behavior. |
+| 2026-10-25 04:17:56 | Created | `scripts/create_game_guide_ppt.py` | Added a reproducible generator for the editable 12-slide beginner presentation using the website's warm-white, lime, lavender, peach, sharp-grid, and light-dither style. |
+| 2026-10-25 04:17:56 | Created | `presentations/Unreliable_Orchestra_How_to_Play.pptx` | Added the PowerPoint guide defining game terms, joining, roles, pitch shifting, shared clues, a worked solution, exact scoring, reveal, replay, and reconnection. |
 
 ## Build order
 
@@ -123,5 +125,6 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 02:09 | Dither click ripple | All 9 tests and the production build passed. At a static 375 px browser viewport, a click changed the dither image and it returned exactly to its original image after the ripple faded. |
 | 2026-10-25 02:25 | Render deployment readiness | All 9 tests and the production build passed. The production server returned HTTP 200 for `/health` and the homepage. `git diff --check` passed; no Render deployment was started from this workspace. |
 | 2026-10-25 03:00 | Lint regression | ESLint reported 7 issues; all were fixed. `npm run lint` passed with zero warnings, all 9 tests passed, and the TypeScript/Vite production build passed. |
+| 2026-10-25 04:17 | PowerPoint guide | Opened and rendered all 12 slides in PowerPoint, visually reviewed the full deck and enlarged example slides, confirmed 342 editable text shapes and no shapes outside the slide, and compiled the generator. |
 
 No project source files were deleted. The unused `tsx` dependency was removed from the package manifests. Browser screenshots were written only to the system temporary directory.
