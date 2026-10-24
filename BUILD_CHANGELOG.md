@@ -77,6 +77,13 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 01:45:40 | Modified | `src/audio.test.ts` | Adjusted the fake audio context for Node's strip-only TypeScript runner. |
 | 2026-10-25 01:47:55 | Modified | `src/Session.tsx` | Marked the game header for compact sound controls on narrow screens. |
 | 2026-10-25 01:47:55 | Modified | `src/styles.css` | Kept Mute sound and Test tone accessible in the mobile game header. |
+| 2026-10-25 02:00:15 | Created | `src/Dither.tsx` | Added the user-provided WebGL dither component as a decorative background renderer. |
+| 2026-10-25 02:00:35 | Created | `src/Dither.css` | Sized and layered the dither canvas behind the interface without intercepting clicks. |
+| 2026-10-25 02:00:35 | Modified | `src/main.tsx` | Mounted a pale lavender dither across the app, with animation disabled on narrow screens and reduced-motion devices. |
+| 2026-10-25 02:00:35 | Modified | `src/styles.css` | Kept app and loading content above the fixed dither layer. |
+| 2026-10-25 02:00:48 | Modified | `src/Dither.tsx` | Removed the pasted Next.js-only directive that produced a Vite build warning. |
+| 2026-10-25 02:01:20 | Modified | `src/Dither.css` | Reduced dither opacity to 9% on desktop and 6% on narrow screens after visual review. |
+| 2026-10-25 02:07:40 | Modified | `src/main.tsx` | Enabled the supplied dither component's click ripple so pointer clicks and taps briefly disturb the background while hover remains quiet. |
 
 ## Build order
 
@@ -100,5 +107,7 @@ All timestamps are in India Standard Time (IST, UTC+05:30). Each row records a s
 | 2026-10-25 01:03 | ngrok share workflow | All 8 tests, the production build, and launcher syntax passed. The launcher reported the missing ngrok agent clearly; a public tunnel could not be verified without installation and account authentication. |
 | 2026-10-25 01:46 | Audio regression | All 9 tests and the production build passed. A browser session reached a running AudioContext and created audio nodes for the test tone, Rhythm Keeper playback, and Melodist playback; physical speaker output was not measurable here. |
 | 2026-10-25 01:49 | Mobile audio controls | A production browser check at a true 375 px viewport found no horizontal overflow; Mute sound and Test tone were both visible. All 9 tests and the production build passed after the mobile header changes. |
+| 2026-10-25 02:03 | Dither background | All 9 tests and the production build passed. Desktop and 375 px mobile production captures showed the pale pattern behind readable content; mobile had no horizontal overflow. |
+| 2026-10-25 02:09 | Dither click ripple | All 9 tests and the production build passed. At a static 375 px browser viewport, a click changed the dither image and it returned exactly to its original image after the ripple faded. |
 
 No project source files were deleted. The unused `tsx` dependency was removed from the package manifests. Browser screenshots were written only to the system temporary directory.
