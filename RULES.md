@@ -2,9 +2,9 @@
 
 ## Event
 
-**DevDay Exchange Community Hackathon: Kochi**
+**DevinHacks Kochi**
 
-**Dates:** 10–11 October 2026
+**Dates:** 24-25 October 2026
 
 **Venue:** JAIN University, Kochi — rooms 2008 and 2009
 
@@ -14,9 +14,9 @@
 
 All times below are in **Indian Standard Time (IST, UTC+05:30)**:
 
-- Check-in: **10 October, 6:00 PM**.
-- Kick-off: **10 October, 6:30 PM**.
-- Wrap-up: **11 October, by 10:00 AM**.
+- Check-in: **24 October, 5:00 PM**.
+- Kick-off: **25 October, 6:30 PM**.
+- Wrap-up: **25 October, by 10:00 AM**.
 
 ## Participation and building
 
@@ -38,6 +38,6 @@ All times below are in **Indian Standard Time (IST, UTC+05:30)**:
 
 ## Source and repository guidance
 
-These rules reflect the organizer-provided event announcement. The [Luma page](https://luma.com/z10nz8gp) is the event and registration reference. Follow any event updates communicated by the organizers.
+These rules reflect the organizer-provided event announcement. The [Luma page](https://luma.com/3v8n74l1) is the event and registration reference. Follow any event updates communicated by the organizers.
 
 [AGENTS.md](AGENTS.md) adds project workflow guidance for simple coding patterns, documentation, verification, and regular commits. Its commit cadence is a template convention, not an additional event eligibility rule.
