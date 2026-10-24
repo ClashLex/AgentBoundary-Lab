@@ -15,7 +15,7 @@ No project implementation has been recorded yet. Replace this sentence with entr
 - Limitations: <known issues or "None identified in these checks">
 ```
 
-## Template setup — 10 October 2026
+## Template setup — 24 October 2026
 
 - Changed: Added the event README, rules, agent guide, change log, AI usage record, submission checklist, Git ignore rules, and pull request checklist.
 - Why: Give participants a consistent starting point for event rules, basic coding patterns, documented changes, and regular commits.
